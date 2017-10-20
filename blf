@@ -1,0 +1,20 @@
+BLF
+
+Extensions.conf
+[blf]
+exten => 2000,hint,SIP/${DB(mac/${EXTEN})} ; 2000
+exten => 2001,hint,SIP/2001 ; 2001
+exten => 2002,hint,SIP/00085d2569be ; 2002
+
+sip.conf
+qualify=yes
+allowsubscribe=yes
+call-limit=3
+limitonpeers=yes
+subscribecontext=blf
+notifyringing=yes
+
+core show hints
+2002@blf : SIP/00085d2569be      State:Idle            Watchers  0
+2001@blf : SIP/2001              State:Idle            Watchers  1
+2000@blf : SIP/58bfea11510e      State:Idle            Watchers  1
