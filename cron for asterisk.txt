@@ -1,0 +1,3 @@
+0 1 * * * mv /var/log/asterisk/cdr-csv/Master.csv /var/log/asterisk/cdr-csv/cdr/`date +%Y_%m_%d`.csv
+
+0 1 1 * * tar -czf /var/log/asterisk/cdr-csv/archive/cdr_`date +%Y_%m_%d`.tgz /var/log/asterisk/cdr-csv/cdr/*.csv ; rm /var/log/asterisk/cdr-csv/cdr/*.csv
